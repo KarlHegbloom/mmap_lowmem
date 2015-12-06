@@ -1,3 +1,9 @@
+mmap-lowmem (20120828-oaktree2) unstable; urgency=low
+
+  * Add example script for dpkg-divert wrapper around Minetest.
+
+ -- Karl M. Hegbloom <karl.hegbloom@gmail.com>  Sun, 06 Dec 2015 13:56:09 -0700
+
 mmap-lowmem (20120828-oaktree1) unstable; urgency=low
 
   * Initial Release.
