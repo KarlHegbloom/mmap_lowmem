@@ -34,7 +34,11 @@ static pthread_mutex_t page_alloc_lock = PTHREAD_MUTEX_INITIALIZER;
 #define MBYTE (KBYTE * 1024)
 #define GBYTE (MBYTE * 1024)
 
-#define ENABLE_VERBOSE 1
+// ENABLE_VERBOSE causes it to stop for keyboard input which is not
+// good when launching minetest full screen from a GUI, so do not
+// enable by default. It is still available via CFLAGS.
+//
+// #define ENABLE_VERBOSE 1
 
 #if (ENABLE_VERBOSE != 1)
 #define printf(...)

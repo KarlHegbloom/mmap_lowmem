@@ -1,3 +1,7 @@
 .*.swp
 *.so
 *.o
+/debian/files
+/debian/mmap-lowmem.debhelper.log
+/debian/mmap-lowmem.substvars
+/debian/mmap-lowmem/*

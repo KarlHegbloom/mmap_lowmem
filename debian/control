@@ -1,0 +1,25 @@
+Source: mmap-lowmem
+Priority: optional
+Maintainer: Karl M. Hegbloom <karl.hegbloom@gmail.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+Section: libs
+Vcs-Git: git://github.com/KarlHegbloom/mmap-lowmem.git
+Vcs-Browser: https://github.com/KarlHegbloom/mmap-lowmem
+
+Package: mmap-lowmem
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Wrapper for mmap() to expand the address range.
+ This is a wrapper for mmap() to expand the address range of the
+ `MAP_32BIT` flag from 31bits to a full 32bits (i.e. the low 4Gbytes).
+ .
+ The main use of this wrapper is to allow LuaJIT to use more then
+ 1Gbyte of ram on Linux.  With this wrapper LuaJIT can use amost a
+ full 4Gbytes of ram on a 32bit processor, but only 2Gbytes on a 64bit
+ processor for reasons this package creator does not
+ understand. FixMe.
+ .
+ With this wrapper, Minetest will not crash with an out of memory
+ error when using some mapgen mods that otherwise cause a crash when
+ you push past the edge of the already-generated map region.
